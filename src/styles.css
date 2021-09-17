@@ -1,1 +1,240 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+.progress-bar {
+    overflow: visible !important;
+    background-color: transparent !important;
+    text-align: unset!important;
+}
+
+.progress-bar2 {
+    justify-content: center;
+    text-align: center;
+    transition: width .6s ease;
+    background-color: #007bff;
+    color: white;
+}
+
+#logo-wrapper {
+    display: none;
+}
+
+.leaflet-cluster-anim .leaflet-marker-icon,
+.leaflet-cluster-anim .leaflet-marker-shadow {
+    -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.3s ease-in;
+    -moz-transition: -moz-transform 0.3s ease-out, opacity 0.3s ease-in;
+    -o-transition: -o-transform 0.3s ease-out, opacity 0.3s ease-in;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-in;
+}
+
+.leaflet-cluster-spider-leg {
+    /* stroke-dashoffset (duration and function) should match with leaflet-marker-icon transform in order to track it exactly */
+    -webkit-transition: -webkit-stroke-dashoffset 0.3s ease-out, -webkit-stroke-opacity 0.3s ease-in;
+    -moz-transition: -moz-stroke-dashoffset 0.3s ease-out, -moz-stroke-opacity 0.3s ease-in;
+    -o-transition: -o-stroke-dashoffset 0.3s ease-out, -o-stroke-opacity 0.3s ease-in;
+    transition: stroke-dashoffset 0.3s ease-out, stroke-opacity 0.3s ease-in;
+}
+
+.marker-cluster-small {
+    background-color: rgba(181, 226, 140, 0.6);
+}
+
+.marker-cluster-small div {
+    background-color: rgba(110, 204, 57, 0.6);
+}
+
+.marker-cluster-medium {
+    background-color: rgba(241, 211, 87, 0.6);
+}
+
+.marker-cluster-medium div {
+    background-color: rgba(240, 194, 12, 0.6);
+}
+
+.marker-cluster-large {
+    background-color: rgba(253, 156, 115, 0.6);
+}
+
+.marker-cluster-large div {
+    background-color: rgba(241, 128, 23, 0.6);
+}
+
+
+/* IE 6-8 fallback colors */
+
+.leaflet-oldie .marker-cluster-small {
+    background-color: rgb(181, 226, 140);
+}
+
+.leaflet-oldie .marker-cluster-small div {
+    background-color: rgb(110, 204, 57);
+}
+
+.leaflet-oldie .marker-cluster-medium {
+    background-color: rgb(241, 211, 87);
+}
+
+.leaflet-oldie .marker-cluster-medium div {
+    background-color: rgb(240, 194, 12);
+}
+
+.leaflet-oldie .marker-cluster-large {
+    background-color: rgb(253, 156, 115);
+}
+
+.leaflet-oldie .marker-cluster-large div {
+    background-color: rgb(241, 128, 23);
+}
+
+.marker-cluster {
+    background-clip: padding-box;
+    border-radius: 20px;
+}
+
+.marker-cluster div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 15px;
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.marker-cluster span {
+    line-height: 30px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+#windy .leaflet-popup-content-wrapper,
+#windy .leaflet-popup-tip {
+    background: none !important;
+    color: #333;
+    box-shadow: none !important;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: none !important;
+    color: #333;
+    box-shadow: none !important;
+}
+
+.container-img {
+    position: relative;
+    /* width: 1280px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container-img .cards {
+    position: relative;
+    width: 200px;
+    height: 266.6666666px;
+    background: linear-gradient(#2196f3, #2196f3 30%, #1d3548 30%, #1d3548);
+    margin: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container-img .cards .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 100000;
+    border-radius: 20px;
+    overflow: hidden;
+    transform-origin: top;
+}
+
+.container-img .cards:hover .imgBx,
+.container-img .cards:active .imgBx {
+    transform: translateY(30px) scale(0.5);
+    top: -25px;
+}
+
+.container-img .cards .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-img .cards .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    transform: translateY(100%);
+    transition: 0.5s;
+}
+
+.container-img .cards:hover .content,
+.container-img .cards:active .content {
+    transform: translateY(0);
+}
+
+.container-img .cards .content .details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container-img .cards .content .details h2 {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.container-img .cards .content .details h2 span {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #03a9f4;
+}
+
+:root {
+    --sidebarbg: #fff;
+    --sidebarcolor: #6c757d;
+    --sidebarbordercolor: rgba(72, 94, 144, 0.16);
+    --sidebaractivecolor: #4c75f2;
+    --sidebarheadingcolor: #6c757d;
+    --sidebarheadingbackground: #fff;
+    --logobg: #fff;
+    --logocolor: #4c75f2;
+    --headerbackground: #fff;
+    --headercolor: #292b3a;
+    --searchcolor: #292b3a;
+    --primarycolor: #1e3d73;
+    --bodycolor: #292b3a;
+    --bodybackground: #f6f6f7;
+    --bordercolor: rgba(72, 94, 144, 0.16);
+    --mainbackground: #fff;
+    --secondary: #6c757d;
+    --success: #1ee0ac;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #f64e60;
+    --dark: #343a40;
+    --sidebarwidth: 140px;
+}

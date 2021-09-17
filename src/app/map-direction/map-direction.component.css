@@ -1,0 +1,32 @@
+.overlay-btn-routing {
+    position: absolute;
+    top: 120px;
+    right: 85px;
+}
+
+.input-container {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.input-field:focus {
+    border: 2px solid dodgerblue;
+}

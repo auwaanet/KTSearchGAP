@@ -1,0 +1,27 @@
+<div class="map-container">
+    <div id="map"></div>
+</div>
+
+<div class="overlay-drag-info">
+    <app-drag-infor></app-drag-infor>
+</div>
+<div class="overlay-drag-info-right">
+    <app-drag-infor-right></app-drag-infor-right>
+</div>
+
+<div cdkDrag class="overlay-search">
+    <app-map-search>
+    </app-map-search>
+</div>
+
+<div routerLink="../addpoly" class="overlay-btn-draw">
+    <button class="btn" style="text-shadow: 0 0 4px black; color: #fff3e1; font-size: 18px;">เพิ่มpolygon</button>
+</div>
+<div (click)="Amphoreshow()" class="overlay-btn-amphore">
+    <button class="btn" style="text-shadow: 0 0 4px black; color: #fff3e1; font-size: 18px;">อำเภอ</button>
+</div>
+
+<div (click)="Tambolshow()" class="overlay-btn-tambol">
+    <button class="btn" style="text-shadow: 0 0 4px black; color: #fff3e1; font-size: 18px;">ตำบล</button>
+</div>
+<app-right-sidebar></app-right-sidebar>

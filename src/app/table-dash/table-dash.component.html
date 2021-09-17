@@ -1,0 +1,58 @@
+<div class="card">
+    <div class="card-header  justify-content-between align-items-center">
+        <h6 class="card-title">Visits by Countries</h6> <span>  มีข้อมูล {{filterMetadata.count}} แถว</span>
+
+        <form class="search-table card-title">
+            <div class="form-group">
+                <div>
+                    <input type="text" id="searchString" class="searchString" name="searchString" placeholder="พิมพ์เพื่อค้นหา ..." [(ngModel)]="searchString" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-body table-responsive p-0">
+
+        <table class="table font-w-600 mb-0">
+            <thead>
+                <tr>
+                    <th class="th-pointer" [appSort]="data_dashboard" data-order="desc" scope="col">index</th>
+                    <th class="th-pointer" scope="col">avatar</th>
+                    <th class="th-pointer" [appSort]="data_dashboard" data-order="desc" data-name="Growthid" scope="col">Growthid</th>
+                    <th class="th-pointer" [appSort]="data_dashboard" data-order="desc" data-name="farmername" scope="col">farmername</th>
+                    <th class="th-pointer" [appSort]="data_dashboard" data-order="desc" data-name="Plantname" scope="col">Plantname</th>
+                    <th class="th-pointer" [appSort]="data_dashboard" data-order="desc" data-name="growthprice" scope="col">growthprice</th>
+                    <th class="th-pointer" [appSort]="data_dashboard" data-order="desc" data-name="Amount" scope="col">Amount</th>
+                    <th class="th-pointer" [appSort]="data_dashboard" data-order="desc" data-name="province" scope="col">province</th>
+                    <th class="th-pointer" [appSort]="data_dashboard" data-order="desc" data-name="area_id" scope="col">area_id</th>
+                    <th class="th-pointer" [appSort]="data_dashboard" data-order="desc" data-name="completepercent" scope="col">completepercent</th>
+                    <th class="th-pointer" scope="col">flyto</th>
+
+                </tr>
+            </thead>
+            <tbody *ngFor="let el of data_dashboard|searchtable : 'farmername' : searchString: filterMetadata; index as i ; let l = count">
+                <tr class="zoom">
+                    <th>{{i+1}}</th>
+                    <th>
+                        <img src="http://203.170.129.207/kasettrackservices_v2/images/Avatar/{{el.Loginpicture}}" class="avatar"></th>
+                    <th>{{el.Growthid}}</th>
+                    <th>{{el.farmername}}</th>
+                    <td>{{el.Plantname}}</td>
+                    <td>{{el.growthprice}}</td>
+                    <td>{{el.Amount}}</td>
+                    <td>{{el.province}}</td>
+                    <td>{{el.area_id}}</td>
+                    <td>
+                        <div class="progress ">
+                            <div class="progress-bar2 progress-bar-striped progress-bar-animated active " role="progressbar" [style.width]="el.completepercent + '%' " [style.width]="el.completepercent + '%' " aria-valuenow="el.completepercent
+                            " aria-valuemin="0 " aria-valuemax="100 ">{{el.completepercent}}%</div>
+                            <!-- <div class="progress-bar " role="progressbar " [style.width]="el.completepercent + '%' " aria-valuenow=" el.completepercent " aria-valuemin="0 " aria-valuemax="100 ">{{el.completepercent}}%</div> -->
+                        </div>
+                    </td>
+                    <td><button class="btn btn-info ">ไป</button></td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+.drag-box-2 {
+    height: auto;
+    width: auto;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 500;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+}
+
+::-webkit-scrollbar {
+    display: none !important;
+}
+
+.scroller {
+    display: none !important;
+}
+
+.card-poly,
+.card-body-all {
+    padding: 1rem 1rem;
+}
+
+.header {
+    padding: .75rem 0 0 .5rem;
+    cursor: move;
+    position: relative;
+    border: 1px solid var(--bordercolor);
+    margin: 0 !important;
+}
+
+.help-panel-header__close-button {
+    fill: #3c4043;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    height: 1.5rem;
+    padding: 0;
+    width: 1.5rem;
+}
+
+.box-card {
+    overflow-y: scroll;
+    height: calc(100vh - 110px);
+}
+
+.box-card {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.box-card::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
