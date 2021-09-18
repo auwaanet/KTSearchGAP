@@ -1,6 +1,6 @@
 .drag-box-2 {
     height: auto;
-    width: auto;
+    width: 480px;
     background-color: white;
     align-items: center;
     justify-content: center;
@@ -59,3 +59,16 @@
     display: none;
     /* Safari and Chrome */
 }
+
+.testimonial-group > .row {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  
+}
+.testimonial-group > .row > .col-2 {
+  display: inline-block;
+}
+
+
+

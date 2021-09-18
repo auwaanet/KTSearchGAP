@@ -60,9 +60,21 @@
     z-index: 6;
 }
 
+
 .overlay-btn-tambol {
     position: absolute;
     top: 160px;
+    right: 22px;
+    text-shadow: 0 0 4px black;
+    background-color: rgba(68, 65, 65, 0.84);
+    transform: scale(.6, .6);
+    border-radius: 34px;
+    transform-origin: right;
+    z-index: 6;
+}
+.overlay-btn-showmenu{
+    position: absolute;
+    top: 195px;
     right: 22px;
     text-shadow: 0 0 4px black;
     background-color: rgba(68, 65, 65, 0.84);

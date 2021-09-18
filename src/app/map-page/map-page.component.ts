@@ -2,6 +2,8 @@ import { Component, AfterViewInit } from '@angular/core';
 import {MapServiceService} from '../services/map-service.service'
 import { HttpClient } from '@angular/common/http';
 import * as L from 'leaflet';
+declare var $: any;
+
 @Component({
   selector: 'app-map-page',
   templateUrl: './map-page.component.html',
@@ -30,6 +32,11 @@ export class MapPageComponent implements AfterViewInit {
 };
 
   constructor(private MapService:MapServiceService,private http: HttpClient) { }
+  Showmenu(){      
+  $(".drag-box-2").css("display", "block");
+  $(".overlay-btn-showmenu").css("display", "none");
+  }
+
   Amphoreshow(){
     if (! this.check_amphore) {
       this.amphoreLayer.addTo(this.MapService.map);

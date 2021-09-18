@@ -8,6 +8,8 @@ declare var $: any;
 })
 export class DragInforComponent implements OnInit {
   cards:any = []
+  hello:any = 'hello'
+
   geojson2={
     "type": "FeatureCollection",
     "features": [
@@ -83,6 +85,8 @@ export class DragInforComponent implements OnInit {
     if($('#'+id).css("display")=='none'){
       $('#'+id).css("display", "block");
       $('#'+id+"_btn").text("Hide");
+      console.log(this.hello);
+
     }else{
       $('#'+id).css("display", "none");
       $('#'+id+"_btn").text("More");
