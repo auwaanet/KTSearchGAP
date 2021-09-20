@@ -10,9 +10,9 @@
             </div>
         </form>
     </div>
-    <div class="card-body table-responsive p-0">
+    <div class="card-body table-responsive">
 
-        <table class="table font-w-600 mb-0">
+        <table class="table layout-primary">
             <thead>
                 <tr>
                     <th class="th-pointer" [appSort]="data_dashboard" data-order="desc" scope="col">index</th>
@@ -30,7 +30,7 @@
                 </tr>
             </thead>
             <tbody *ngFor="let el of data_dashboard|searchtable : 'farmername' : searchString: filterMetadata; index as i ; let l = count">
-                <tr class="zoom">
+                <tr>
                     <th>{{i+1}}</th>
                     <th>
                         <img src="http://203.170.129.207/kasettrackservices_v2/images/Avatar/{{el.Loginpicture}}" class="avatar"></th>

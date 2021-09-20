@@ -114,17 +114,7 @@ let options = {
       labels: {
           useSeriesColors: true
       },
-      markers: {
-          customHTML: [
-              function () {
-                  return '<span><i class="fab fa-facebook"></i></span>'
-              }, function () {
-                  return '<span><i class="fab fa-vine"></i></span>'
-              }, function () {
-                  return '<span><i class="fab fa-dribbble"></i></span>'
-              }
-          ]
-      }
+
   }
 }
 
@@ -148,7 +138,7 @@ am4core.ready(function() {
      * Chart design taken from Samsung health app
      */
     
-     chart = am4core.create("chartdiv", am4charts.XYChart);
+    chart = am4core.create("chartdiv", am4charts.XYChart);
     chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
     
     chart.paddingBottom = 30;
@@ -181,7 +171,7 @@ am4core.ready(function() {
     
     var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = "name";
-    categoryAxis.renderer.grid.template.strokeOpacity = 0;
+    categoryAxis.renderer.grid.template.strokeOpacity = 0.1;
     categoryAxis.renderer.minGridDistance = 10;
     categoryAxis.renderer.labels.template.dy = 35;
     categoryAxis.renderer.tooltip.dy = 35;
@@ -189,10 +179,10 @@ am4core.ready(function() {
     var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     valueAxis.renderer.inside = true;
     valueAxis.renderer.labels.template.fillOpacity = 0.3;
-    valueAxis.renderer.grid.template.strokeOpacity = 0;
+    valueAxis.renderer.grid.template.strokeOpacity = 0.1;
     valueAxis.min = 0;
-    valueAxis.cursorTooltipEnabled = false;
-    valueAxis.renderer.baseGrid.strokeOpacity = 0;
+    valueAxis.cursorTooltipEnabled = true;
+    valueAxis.renderer.baseGrid.strokeOpacity = 0.1;
     
     var series = chart.series.push(new am4charts.ColumnSeries);
     series.dataFields.valueY = "steps";
@@ -266,6 +256,8 @@ am4core.ready(function() {
             }
         }
     })
+    chart.scrollbarX = new am4core.Scrollbar();
+
     
     }); // end am4core.ready() 
 

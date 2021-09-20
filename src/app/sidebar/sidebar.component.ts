@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
+declare var $: any;
 
 @Component({
   selector: 'app-sidebar',
@@ -17,6 +18,14 @@ export class SidebarComponent implements OnInit {
   .then(() => {
     window.location.reload();
   });
+  }
+
+  main(){
+    this.Router.navigate([''])
+  }
+
+  map(){
+    this.Router.navigate(['map'])
   }
 
 }

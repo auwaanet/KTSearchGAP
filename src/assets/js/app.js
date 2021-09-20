@@ -154,7 +154,7 @@
             <a href="#" id="settingbutton" class="setting"> 
                 <h5 class="mb-0"><i class="icon-settings"></i></h5>
             </a>
-            <div class="sidbarchat p-3">
+            <div class="sidbarchat p-3" style='background: rgba(0, 0, 0, 0) url("assets/images/gradient-bg2.jpg") repeat scroll 0% 0%; --primarycolor: #17b3a3;'>
                 <h5 class="mb-0">TEMPLATE CUSTOMIZER</h5>
                 <p>Customize your template</p>
                 <hr/>
@@ -194,30 +194,14 @@
                 <li class="gradient-img-block m-2 list-inline-item float-left color2" data-primary="#396e94"  data-img="gradient-bg.jpg">
                 <img src="assets/images/g.jpg" alt="gradient" width="100"/>
                 </li> 
-      <li class="gradient-img-block m-2 list-inline-item float-left color2" data-primary="#49424a"  data-img="gradient-bg4.jpg">
+                <li class="gradient-img-block m-2 list-inline-item float-left color2" data-primary="#49424a"  data-img="gradient-bg4.jpg">
                 <img src="assets/images/g4.jpg" alt="gradient" width="100"/>
-                </li>
-    <li class="gradient-img-block m-2 list-inline-item float-left color2" data-primary="#eb6709"  data-img="gradient-bg7.jpg">
-                <img src="assets/images/g7.jpg" alt="gradient" width="100"/>
-                </li>
-                <li class="gradient-img-block m-2 list-inline-item float-left color2" data-primary="#bb416b"  data-img="gradient-bg1.jpg">
-                <img src="assets/images/g1.jpg" alt="gradient" width="100"/>
-                </li>
-                <li class="gradient-img-block m-2 list-inline-item float-left color2" data-primary="#17b3a3"  data-img="gradient-bg2.jpg">
-                <img src="assets/images/g2.jpg" alt="gradient" width="100"/>
                 </li>
                 <li class="gradient-img-block m-2 list-inline-item float-left color2" data-primary="#4e7184"  data-img="gradient-bg3.jpg">
                 <img src="assets/images/g3.jpg" alt="gradient" width="100"/>
                 </li>
-              
-                <li class="gradient-img-block m-2 list-inline-item float-left color2" data-primary="#11d2d7"  data-img="gradient-bg5.jpg">
-                <img src="assets/images/g5.jpg" alt="gradient" width="100"/>
-                </li>
                 <li class="gradient-img-block m-2 list-inline-item float-left color2" data-primary="#da88d1"  data-img="gradient-bg6.jpg">
                 <img src="assets/images/g6.jpg" alt="gradient" width="100"/>
-                </li>
-                <li class="gradient-img-block m-2 list-inline-item float-left color2" data-primary="#da88d1"  data-img="g8_full.png">
-                <img src="assets/images/g8.png" alt="gradient" width="100"/>
                 </li>
 
                 <li class="gradient-img-block m-2 list-inline-item float-left color2" data-primary="#da88d1"  data-img="g9_full.webp">
@@ -264,12 +248,20 @@
         $(".gradient-img-block").removeClass('active');
         $(this).addClass('active');
         var imageUrl = "assets/images/" + $(this).data('img');
-        console.log(imageUrl);
-        $('.gbackground, .gradient, .gradient #header-fix, .gradient #header-fix .logo-bar,.gradient .sidebar, .gradient .sidebar .dropdown-menu, .gradient #settings .sidbarchat, .gradient.horizontal-menu #header-fix, .gradient.horizontal-menu .sidebar .sidebar-menu > li.active, .gradient.horizontal-menu .sidebar .sidebar-menu > li:hover, .gradient.horizontal-menu .sidebar .sidebar-menu > li ul, .gradient.compact-menu .sidebar, .gradient .dropdown-menu').css('background', "url(" + imageUrl + ")");
-        $('body').css("--primarycolor", $(this).data('primary'));
+        $('.gbackground, .gradient, #header-fix,  #header-fix .logo-bar, .sidebar,  .sidebar .dropdown-menu,  #settings , .horizontal-menu #header-fix, .horizontal-menu .sidebar .sidebar-menu > li.active, .horizontal-menu .sidebar .sidebar-menu > li:hover, .horizontal-menu .sidebar .sidebar-menu > li ul, .compact-menu .sidebar,  .dropdown-menu').css('background', "url(" + imageUrl + ")");
         createCookie('cookiesprimarycolor', $(this).data('primary'));
-        createCookie('gradientimg', imageUrl);
+        createCookie("gradientimg", imageUrl);
+
+
+        if (imageUrl == 'assets/images/g9_full.webp') {
+            $('body').css("color", "black");
+        } else {
+            $('body').css("color", "white");
+        }
+
     });
+
+
     $(".color-box").on('click', function() {
         $("input.color").val($(this).data('color'));
         $('body').css("--primarycolor", $("input.color").val());
@@ -370,7 +362,7 @@
             $('.gradient-img').show();
             var gradientimg = getCookie("gradientimg");
             if (gradientimg != null && gradientimg != '') {
-                $('.gbackground, .gradient, .gradient #header-fix, .gradient #header-fix .logo-bar,.gradient .sidebar, .gradient .sidebar .dropdown-menu, .gradient #settings .sidbarchat, .gradient.horizontal-menu #header-fix, .gradient.horizontal-menu .sidebar .sidebar-menu > li.active, .gradient.horizontal-menu .sidebar .sidebar-menu > li:hover, .gradient.horizontal-menu .sidebar .sidebar-menu > li ul, .gradient.compact-menu .sidebar, .gradient .dropdown-menu').css('background', "url(" + gradientimg + ")");
+                $('.gbackground, .gradient,#header-fix, #header-fix .logo-bar, .sidebar, .sidebar .dropdown-menu, #settings .sidbarchat, .horizontal-menu #header-fix, .horizontal-menu .sidebar .sidebar-menu > li.active, .horizontal-menu .sidebar .sidebar-menu > li:hover, .horizontal-menu  .sidebar-menu > li ul, .compact-menu .sidebar,  .dropdown-menu').css('background', "url(" + gradientimg + ")");
             }
         }
     }
@@ -433,7 +425,7 @@
 function createCookie(name, value) {
     var now = new Date();
     now.setTime(now.getTime() + 1 * 3600 * 1000);
-    document.cookie = name + "=" + value + ";expires=" + now.toUTCString() + "; path=/pick";
+    document.cookie = name + "=" + value + ";expires=" + now.toUTCString() + "; path=/test";
 }
 
 function getCookie(cname) {
@@ -453,7 +445,7 @@ function getCookie(cname) {
 }
 
 function delete_cookie(name) {
-    document.cookie = name + '=; Path=/pick; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    document.cookie = name + '=; Path=/test; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
 function getUrlParameter(sParam) {

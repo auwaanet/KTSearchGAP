@@ -1,12 +1,12 @@
-<div cdkDrag class="drag-box" style="display: none; ">
-    <div class="header row " cdkDragHandle>
+<div cdkDrag class="drag-box" style="display: none; color: black;">
+    <div class="header row" style="border-bottom: 1px solid black;" cdkDragHandle>
         <h5 class="col-10 ">ผลการค้นหา4แปลง</h5>
         <button (click)="closeBtn() " class="help-panel-header__close-button col-2 " aria-label="ปิดแผงความช่วยเหลือ " data-stats-ignore=" "><svg class="help-panel-header__close-icon " viewBox="0 0 48 48 "><path d="M38 12.83L35.17 10 24 21.17 12.83
     10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z "></path></svg></button>
     </div>
-    <div class="box-card ">
+    <div class="box-card">
         <div class="card-list search-div-card " *ngFor="let card of cards; index as i ">
-            <div class="card card-poly " style="max-width: 17rem; width:100% ">
+            <div class="card card-poly " style="max-width: 17rem; width:100%;  background:white;">
                 <img style="cursor: pointer; " (click)="eachfarm(i+1) " class="card-img-top " src="../../assets/pic/poly{{i+1}}.JPG " alt="Card image cap ">
                 <div class="card-body-div ">
                     <h4 class="card-title "> ชื่อแปลง {{i+1}}</h4>

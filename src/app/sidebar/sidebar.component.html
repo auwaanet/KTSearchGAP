@@ -1,16 +1,15 @@
-<div class="sidebar">
+<div class="sidebar" style='background: rgba(0, 0, 0, 0) url("assets/images/gradient-bg.jpg") repeat scroll 0% 0%; --primarycolor: #17b3a3;'>
     <div class="site-width">
 
         <!-- START: Menu-->
         <ul id="side-menu" class="sidebar-menu">
-            <li class="dropdown active"><a href="#"><i class="icon-home mr-1"></i> Dashboard</a>
+            <li class="dropdown active"><a href="#"><i class="icon-home mr-1"></i> monitoring & analysis</a>
                 <ul>
-                    <li><a routerLink=""><i class="icon-rocket"></i> Dashboard</a></li>
-                    <li><a routerLink="../map"><i class="icon-map"></i> Map</a></li>
-                    <li><a style="cursor: pointer;" (click)="windy()"><i class="icon-umbrella"></i> Weather</a></li>
-                    <li><a href="index-account.html"><i class="icon-layers"></i> Account</a></li>
-                    <li><a href="index-analytic.html"><i class="icon-grid"></i> Analytic</a></li>
-                    <li><a href="https://earth.google.com/web/@13.20287883,103.0975883,1405.95281762a,3163672.12564588d,35y,0h,0t,0r?hl=th"><i class="fas fa-globe-asia"></i> GoogleEarth</a></li>
+                    <li><a class="icon-pad main-active" (click)="main()"><i class="icon-rocket"></i> Dashboard</a></li>
+                    <li><a class="icon-pad map-active" (click)="map()"><i class="icon-map"></i> Map</a></li>
+                    <li><a class="icon-pad windy-active" (click)="windy()"><i class="icon-umbrella"></i> Weather</a></li>
+                    <li><a class="icon-pad account-active" routerLink=""><i class="icon-layers"></i> Account</a></li>
+                    <li><a class="icon-pad" href="https://earth.google.com/web/@13.20287883,103.0975883,1405.95281762a,3163672.12564588d,35y,0h,0t,0r?hl=th"><i class="fas fa-globe-asia"></i> GoogleEarth</a></li>
                 </ul>
             </li>
 
