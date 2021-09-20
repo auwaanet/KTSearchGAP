@@ -79,11 +79,6 @@
      Sidebar 
      ============================================================= */
 
-    $('.sidebarCollapse').on('click', function() {
-        $('body').toggleClass('compact-menu');
-        $('.sidebar').toggleClass('active');
-    });
-
     $('.mobilesearch').on('click', function() {
         $('.search-form').toggleClass('d-none');
 
