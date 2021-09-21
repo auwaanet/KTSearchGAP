@@ -2,7 +2,7 @@
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
-    padding-right: 15px;
+    padding-right: 20px;
 }
 
 .btn-secondary,
@@ -21,4 +21,13 @@
 .form-control:focus {
     box-shadow: none;
     border: 1px solid #00838f
+}
+
+.card {
+    background-color: white;
+    color: black;
+}
+
+h5 {
+    font-size: 1.25rem !important;
 }
