@@ -11,10 +11,10 @@ declare var $: any;
 })
 export class MapPageComponent implements AfterViewInit {
   
-  capitals: string = '/assets/data/usa-capitals.geojson';
-  tambol:string = '/assets/data/tambol_south.geojson';
-  village:string = '/assets/data/village_south.geojson';
-  amphore:string = '/assets/data/amphore_south.geojson';
+  capitals: string = 'assets/data/usa-capitals.geojson';
+  tambol:string = 'assets/data/tambol_south.geojson';
+  village:string = 'assets/data/village_south.geojson';
+  amphore:string = 'assets/data/amphore_south.geojson';
   check_amphore:boolean=false;
   check_tambol:boolean=false;
   tambols:any
