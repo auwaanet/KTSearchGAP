@@ -206,16 +206,6 @@
                 </ul>
                 </div>
                 <br/><br/>
-                <hr class="float-left w-100"/>
-                <label class="chkbox horizontal mb-2">Horizontal Menu 
-                    <input name="horizontal" value="horizontal-menu" class="horizontallayout" type="checkbox" >
-                    <span class="checkmark"></span>
-                </label><br/>
-                <label class="chkbox compact">Compact Sidebar 
-                    <input name="compact" value="compact" class="sidebar" type="checkbox" >
-                    <span class="checkmark"></span>
-                </label>
-               
 
             </div>
         </div>`;

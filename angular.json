@@ -28,11 +28,11 @@
                         "assets": [
                             "src/favicon.ico",
                             "src/assets"
+
                         ],
                         "styles": [
                             "src/custom-theme.scss",
-                            "src/styles.css",
-                            "src/web.config"
+                            "src/styles.css"
                         ],
                         "scripts": []
                     },
