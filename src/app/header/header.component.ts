@@ -15,9 +15,11 @@ export class HeaderComponent implements OnInit {
     $('.sidebarCollapse').on('click', function() {
       if ($('body').hasClass('compact-menu')) {
         $('body').removeClass('compact-menu')
+        $('.sidebar').toggleClass('active')
       }
       else{
         $('body').toggleClass('compact-menu');
+        $('.sidebar').removeClass('active')
       }
 
       console.log('hello');

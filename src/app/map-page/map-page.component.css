@@ -13,11 +13,12 @@
 }
 
 .overlay-search {
-    position: absolute;
-    top: 0px;
-    left: 90px;
-    width: 610px;
+    position: fixed;
+    top: 80px;
+    left: 5%;
+    max-width: 950px;
     z-index: 1;
+    width: 80%;
 }
 
 .overlay-drag-info {
@@ -60,7 +61,6 @@
     z-index: 6;
 }
 
-
 .overlay-btn-tambol {
     position: absolute;
     top: 160px;
@@ -72,7 +72,8 @@
     transform-origin: right;
     z-index: 6;
 }
-.overlay-btn-showmenu{
+
+.overlay-btn-showmenu {
     position: absolute;
     top: 195px;
     right: 22px;

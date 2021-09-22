@@ -20,11 +20,20 @@
 }
 
 .overlay-search {
+    position: fixed;
+    top: 80px;
+    left: 5%;
+    max-width: 950px;
+    z-index: 1;
+    width: 80%;
+}
+
+.overlay-drag-info-right {
     position: absolute;
     top: 0px;
-    left: 90px;
-    width: 610px;
-    z-index: 1;
+    right: 110px;
+    width: auto;
+    z-index: 500;
 }
 
 .overlay-btn-draw {
@@ -54,6 +63,18 @@
 .overlay-btn-tambol {
     position: absolute;
     top: 160px;
+    right: 22px;
+    text-shadow: 0 0 4px black;
+    background-color: rgba(68, 65, 65, 0.84);
+    transform: scale(.6, .6);
+    border-radius: 34px;
+    transform-origin: right;
+    z-index: 6;
+}
+
+.overlay-btn-showmenu {
+    position: absolute;
+    top: 195px;
     right: 22px;
     text-shadow: 0 0 4px black;
     background-color: rgba(68, 65, 65, 0.84);

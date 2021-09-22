@@ -3,6 +3,8 @@ import {WindyService} from '../services/windy.service'
 const SCRIPT_PATH = 'https://api.windy.com/assets/map-forecast/libBoot.js';
 import { HttpClient } from '@angular/common/http';
 import * as L from 'leaflet';
+declare var $: any;
+
 @Component({
   selector: 'app-windy',
   templateUrl: './windy.component.html',
@@ -28,6 +30,7 @@ export class WindyComponent implements AfterViewInit {
     opacity: 1,
     fillOpacity: 0.8}
   constructor( private renderer: Renderer2, private scriptService: WindyService,private http: HttpClient) { }
+
   ngAfterViewInit(): void {
   
     this.amphores=this.http.get(this.amphore);
@@ -43,6 +46,11 @@ export class WindyComponent implements AfterViewInit {
     });
 
   }
+
+  Showmenu(){      
+    $(".drag-box-2").css("display", "block");
+    $(".overlay-btn-showmenu").css("display", "none");
+    }
 
   Amphoreshow(){
     if (! this.check_amphore) {

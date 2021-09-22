@@ -12,6 +12,10 @@
     </app-map-search>
 </div>
 
+<div class="overlay-drag-info-right">
+    <app-drag-infor-right></app-drag-infor-right>
+</div>
+
 <div routerLink="../addpoly" class="overlay-btn-draw">
     <button class="btn" style="text-shadow: 0 0 4px black; color: #fff3e1; font-size: 18px;">เพิ่มpolygon</button>
 </div>
@@ -22,6 +26,10 @@
 
 <div (click)="Tambolshow()" class="overlay-btn-tambol">
     <button class="btn" style="text-shadow: 0 0 4px black; color: #fff3e1; font-size: 18px;">ตำบล</button>
+</div>
+
+<div (click)="Showmenu()" class="overlay-btn-showmenu" style="display:none">
+    <button class="btn" style="text-shadow: 0 0 4px black; color: #fff3e1; font-size: 18px;">สภาพอากาศ </button>
 </div>
 
 

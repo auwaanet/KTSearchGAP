@@ -1,6 +1,7 @@
 .drag-box-2 {
     height: auto;
-    width: 480px;
+    max-width: 480px;
+    width: 80%;
     background-color: white;
     align-items: center;
     justify-content: center;
@@ -45,7 +46,7 @@
 
 .box-card {
     overflow-y: scroll;
-    height: calc(100vh - 110px);
+    height: auto;
 }
 
 .box-card {
@@ -60,15 +61,12 @@
     /* Safari and Chrome */
 }
 
-.testimonial-group > .row {
-  display: block;
-  overflow-x: auto;
-  white-space: nowrap;
-  
-}
-.testimonial-group > .row > .col-2 {
-  display: inline-block;
+.testimonial-group>.row {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
-
-
+.testimonial-group>.row>.col-2 {
+    display: inline-block;
+}
