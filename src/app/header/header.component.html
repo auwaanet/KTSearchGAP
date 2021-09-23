@@ -13,11 +13,13 @@
 
             <form class="float-left d-none d-lg-block search-form">
                 <div class="form-group mb-0 position-relative">
-                    <input type="text" class="form-control border-0 rounded bg-search pl-5" placeholder="Search anything...">
+                    <ng-select class="form-control border-0 rounded bg-search pl-5" bindLabel="DISTRICT_NAME" placeholder="Search anything..." appendTo="body" [multiple]="true">
+                    </ng-select>
+                    <!-- <input type="text" class="form-control border-0 rounded bg-search pl-5" placeholder="Search anything..."> -->
                     <div class="btn-search position-absolute top-0">
                         <a href="#"><i class="h6 icon-magnifier"></i></a>
                     </div>
-                    <a href="#" class="position-absolute close-button mobilesearch d-lg-none" data-toggle="dropdown" aria-expanded="false"><i class="icon-close h5"></i>                               
+                    <a href="#" class="position-absolute close-button mobilesearch d-lg-none" aria-expanded="false"><i class="icon-close h5"></i>                               
                   </a>
 
                 </div>
@@ -25,7 +27,7 @@
             <div class="navbar-right ml-auto h-100">
                 <ul class="ml-auto p-0 m-0 list-unstyled d-flex top-icon h-100">
                     <li class="d-inline-block align-self-center  d-block d-lg-none">
-                        <a href="#" class="nav-link mobilesearch" data-toggle="dropdown" aria-expanded="false"><i class="icon-magnifier h4"></i>                               
+                        <a href="#" class="nav-link mobilesearch" aria-expanded="false"><i class="icon-magnifier h4"></i>                               
                       </a>
                     </li>
 

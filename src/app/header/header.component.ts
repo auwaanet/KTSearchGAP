@@ -20,15 +20,24 @@ export class HeaderComponent implements OnInit {
       else{
         $('body').toggleClass('compact-menu');
         $('.sidebar').removeClass('active')
-      }
+      };
+    })
 
-      console.log('hello');
 
+    $('.mobilesearch').on('click', function() {
+        $(".mobilesearch").attr("aria-expanded","true");
+        $('.search-form').removeClass('d-none');
+        
+    })
 
-      // $('body').toggleClass('compact-menu'); .removeClass()
-      // $('.sidebar').toggleClass('active');
-  });
+    $('.close-button').on('click', function() {
+      $(".mobilesearch").attr("aria-expanded","false");
+      $('.search-form').toggleClass('d-none');
+      
+  })
+
+  };
 
   }
 
-}
+

@@ -238,3 +238,14 @@ body {
     --dark: #343a40;
     --sidebarwidth: 140px;
 }
+
+.bg-search .ng-select-container {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    border: none !important;
+    color: white !important;
+}
+
+.bg-search .ng-select-container .ng-value-container .ng-input>input {
+    color: var(--searchcolor)!important;
+}

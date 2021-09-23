@@ -79,10 +79,10 @@
      Sidebar 
      ============================================================= */
 
-    $('.mobilesearch').on('click', function() {
-        $('.search-form').toggleClass('d-none');
+    // $('.mobilesearch').on('click', function() {
+    //     $('.search-form').toggleClass('d-none');
 
-    });
+    // });
 
     /////////////////////////// Datepicker ////////////////////////
     if (typeof $.fn.datepicker !== "undefined") {
